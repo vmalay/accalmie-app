@@ -1,0 +1,46 @@
+/* Accalmie's public pages: the app's two palettes, « Sauge et lin » by day and « nuit bleue » by
+   night, the system's fonts, one column. */
+:root {
+  --ground: #f2efe7;
+  --ink: #22291f;
+  --muted: #4b5446;
+  --accent: #4f6b52;
+  --card: #e4e3d8;
+  --line: #d7d6cb;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #11151b;
+    --ink: #e1e6ec;
+    --muted: #aeb8c3;
+    --accent: #8fb1cf;
+    --card: #1a2028;
+    --line: #232a33;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 1.0625rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+main { max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+header { margin-bottom: 2.5rem; }
+.name { margin: 0; font-size: 2.25rem; line-height: 1.2; letter-spacing: -0.01em; }
+.tagline { margin: 0.5rem 0 0; color: var(--muted); font-size: 1.125rem; }
+h2 { margin: 2.5rem 0 0.75rem; font-size: 1.25rem; line-height: 1.3; }
+h3 { margin: 1.5rem 0 0.25rem; font-size: 1.0625rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.4rem; }
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+.card { background: var(--card); border-radius: 1rem; padding: 1.25rem 1.25rem 0.25rem; margin: 1.5rem 0; }
+.hotlines { list-style: none; padding: 0; }
+.hotlines strong { display: inline-block; min-width: 7.5rem; }
+.updated { color: var(--muted); font-size: 0.9375rem; }
+nav { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9375rem; }
+nav a { margin-right: 1.25rem; }
